@@ -1,0 +1,88 @@
+\documentclass{beamer}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%\usepackage[croatian]{babel}
+\usepackage{lmodern}
+\usepackage{microtype}
+%\usepackage[natbibapa]{apacite}
+\usepackage[style=apa, backend=biber,doi,url,natbib=true]{biblatex}
+
+\DeclareLanguageMapping{croatian}{croatian-apa}
+
+\addbibresource{../reference2.bib}
+
+\title[]{\textit{Megastudy} paradigma i procesiranje jezika}
+\subtitle{\footnotesize Izlaganje za Znanstveni kolokvij}
+\author[]{Denis Vlašiček}
+\date[]{\footnotesize \today}
+
+\renewcommand{\familydefault}{\rmdefault}
+
+\usetheme{CambridgeUS}
+
+\usecolortheme{dove}
+
+\setbeamertemplate{itemize/enumerate items}[default]
+
+\setbeamertemplate{itemize item}{\textbullet}
+\setbeamertemplate{itemize subitem}{\(\triangleright\)}
+
+\setbeamertemplate{section page}{
+    \begin{centering}
+        \Large
+        \insertsection\par
+    \end{centering}
+}
+
+\makeatletter
+\newenvironment{noheadline}{
+    \setbeamertemplate{headline}{}
+    \addtobeamertemplate{frametitle}{\vspace*{-0.9\baselineskip}}{}
+}{}
+\makeatother
+
+\renewcommand*{\bibfont}{\scriptsize}
+
+\begin{document}
+
+\begin{frame}
+    \titlepage
+\end{frame}
+
+\section{\textit{Megastudy} paradigma}
+
+\begin{noheadline}
+
+\begin{frame}
+    \sectionpage
+\end{frame}
+
+\end{noheadline}
+
+\subsection{Uvod}
+
+\begin{frame}
+    \frametitle{Uvod}
+
+    \begin{itemize}
+        \item \textit{megastudy}: velika istraživanja procesiranja jezika
+        \pause
+        \item ishod su velike, otvorene baze podataka
+            \begin{itemize}
+                \item leksičke karakteristike (duljina riječi, učestalost
+                    u jezičnim korpusima)
+                \item psiholingvističke karakteristike (apstraktnost,
+                    polisemija)
+                \item mjere procesiranja (vrijeme reakcije, trajanje fiksacija)
+                \item \citep{zuur2016protocol}
+            \end{itemize}
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \printbibliography
+\end{frame}
+
+\end{document}
