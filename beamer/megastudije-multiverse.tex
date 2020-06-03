@@ -1,24 +1,38 @@
 \documentclass{beamer}
 
+\usepackage[croatian]{babel}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-%\usepackage[croatian]{babel}
 \usepackage{lmodern}
 \usepackage{microtype}
-%\usepackage[natbibapa]{apacite}
-\usepackage[style=apa, backend=biber,doi,url,natbib=true]{biblatex}
+\usepackage{csquotes}
+\usepackage[natbibapa]{apacite}
 
-\DeclareLanguageMapping{croatian}{croatian-apa}
-
-\addbibresource{../reference2.bib}
-
+%%%%% titlepage
 \title[]{\textit{Megastudy} paradigma i procesiranje jezika}
 \subtitle{\footnotesize Izlaganje za Znanstveni kolokvij}
 \author[]{Denis Vlašiček}
 \date[]{\footnotesize \today}
+%%%%%
 
+%%%%% serif font kao default
 \renewcommand{\familydefault}{\rmdefault}
+%%%%%
 
+%%%%% prilagodba referenci na hrvatski
+\renewcommand{\BCBT}{}
+\renewcommand{\BCBL}{}%  comma before last author when no. of authors > 2
+\renewcommand{\BOthers}[1]{i sur.\hbox{}}% ``and others''
+\renewcommand{\BBAA}{i}
+\renewcommand{\BBAB}{i}
+\renewcommand{\BIn}{U:}
+\renewcommand{\BED}{Ur.\hbox{}}
+\renewcommand{\BEDS}{Ur.\hbox{}}
+\renewcommand{\BPGS}{str.\hbox{}}
+\renewcommand{\BRetrievedFrom}{Preuzeto s: }
+%%%%%
+
+%%%%% beamer tema
 \usetheme{CambridgeUS}
 
 \usecolortheme{dove}
@@ -41,8 +55,11 @@
     \addtobeamertemplate{frametitle}{\vspace*{-0.9\baselineskip}}{}
 }{}
 \makeatother
+%%%%%
 
+%%%%5 fontsize za bibliografiju
 \renewcommand*{\bibfont}{\scriptsize}
+%%%%%
 
 \begin{document}
 
@@ -75,14 +92,21 @@
                 \item psiholingvističke karakteristike (apstraktnost,
                     polisemija)
                 \item mjere procesiranja (vrijeme reakcije, trajanje fiksacija)
-                \item \citep{zuur2016protocol}
             \end{itemize}
     \end{itemize}
-
 \end{frame}
 
 \begin{frame}
-    \printbibliography
+    \begin{itemize}
+        \item prednosti pred faktorijalnim nacrtima
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Reference}
+
+    \bibliographystyle{apacite}
+    \bibliography{../reference}
 \end{frame}
 
 \end{document}

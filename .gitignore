@@ -1,0 +1,3 @@
+beamer/*
+!beamer/*.tex
+!beamer/*.pdf
