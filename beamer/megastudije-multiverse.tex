@@ -29,7 +29,9 @@
 \renewcommand{\BED}{Ur.\hbox{}}
 \renewcommand{\BEDS}{Ur.\hbox{}}
 \renewcommand{\BPGS}{str.\hbox{}}
-\renewcommand{\BRetrievedFrom}{Preuzeto s: }
+\renewcommand{\BRetrievedFrom}{Preuzeto s:\hbox{}}
+\renewcommand{\BEd}{izdanje}
+\renewcommand{\BVOL}{svezak}
 %%%%%
 
 %%%%% beamer tema
@@ -49,6 +51,8 @@
     \end{centering}
 }
 
+\setbeamertemplate{navigation symbols}{}
+
 \makeatletter
 \newenvironment{noheadline}{
     \setbeamertemplate{headline}{}
@@ -59,6 +63,14 @@
 
 %%%%5 fontsize za bibliografiju
 \renewcommand*{\bibfont}{\scriptsize}
+%%%%%
+
+%%%%% tiny citep
+\newcommand{\tinycitep}[1]{%
+    \bgroup
+    \scriptsize
+    \citep{#1}
+    \egroup}
 %%%%%
 
 \begin{document}
@@ -83,9 +95,27 @@
     \frametitle{Uvod}
 
     \begin{itemize}
-        \item \textit{megastudy}: velika istraživanja procesiranja jezika
+        \item tradicionalni način ispitivanja --- faktorijalni eksperimenti
+
         \pause
-        \item ishod su velike, otvorene baze podataka
+
+        \item \textit{megastudy}: velika istraživanja procesiranja jezika
+
+        \pause
+
+        \item prednosti pred faktorijalnim nacrtima
+            \tinycitep{keuleersMegastudiesCrowdsourcingLarge2015,
+            balotaMegastudiesWhatMillions2012}
+            \begin{itemize}
+                \item izjednačavanje podražaja na relevantnim dimenzijama
+                \item korištenje kontinuiranih umjesto kategorijalnih mjera
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \begin{itemize}
+        \item ishod su velike, (često) otvorene baze podataka
             \begin{itemize}
                 \item leksičke karakteristike (duljina riječi, učestalost
                     u jezičnim korpusima)
@@ -93,16 +123,74 @@
                     polisemija)
                 \item mjere procesiranja (vrijeme reakcije, trajanje fiksacija)
             \end{itemize}
+
+        \pause
+
+        \item omogućavaju provođenje virtualnih eksperimenata
+            \tinycitep{kupermanVirtualExperimentsMegastudies2015}
+
+        \pause
+
+        \item olakšavaju testiranje novih leksičkih i psiholingvističkih
+            varijabli \tinycitep{yarkoniMovingColtheartNew2008}
     \end{itemize}
 \end{frame}
 
+\subsection[Što nam megastudije govore?]%
+    {Što nam megastudije govore o procesiranju jezika?}
+
 \begin{frame}
+    \frametitle{Što nam megastudije govore o jeziku?}
+
     \begin{itemize}
-        \item prednosti pred faktorijalnim nacrtima
+        \item varijabla koja objašnjava uvjerljivo najviše varijance je
+            učestalost riječi u jeziku
+            \bgroup
+            \scriptsize
+            (\citealp*{balotaVisualWordRecognition2006};
+            \citealp[ch. 6]{harleyPsychologyLanguageData2014})
+            \egroup
+        \begin{itemize}
+            \item kako definirati i mjeriti učestalost?
+
+            \pause
+
+            \item subjektivna učestalost
+        \end{itemize}
+
+        \pause
+
+        \item duljina riječi \tinycitep{ferrandMEGALEXMegastudyVisual2018,
+            brysbaertImpactWordPrevalence2016}
+
+        \pause
+
+        \item ortografska sličnost ili gustoća ortografskog susjedstva
+            \tinycitep{coltheartAccessInternalLexicon1977,
+            yarkoniMovingColtheartNew2008}
     \end{itemize}
 \end{frame}
 
-\begin{frame}
+
+\section{Modeli procesiranja jezika}
+
+\begin{noheadline}
+    \begin{frame}
+        \sectionpage
+    \end{frame}
+\end{noheadline}
+
+\section{\textit{Multiverse} analiza}
+
+\begin{noheadline}
+    \begin{frame}
+        \sectionpage
+    \end{frame}
+\end{noheadline}
+
+\setbeamertemplate{headline}{}
+
+\begin{frame}[allowframebreaks]
     \frametitle{Reference}
 
     \bibliographystyle{apacite}
