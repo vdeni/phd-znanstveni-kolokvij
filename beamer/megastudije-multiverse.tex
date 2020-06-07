@@ -61,6 +61,14 @@
 \makeatother
 %%%%%
 
+%%%%% nastavljanje enumerate
+\newcounter{saveenumi}
+\newcommand{\seti}{\setcounter{saveenumi}{\value{enumi}}}
+\newcommand{\conti}{\setcounter{enumi}{\value{saveenumi}}}
+
+\resetcounteronoverlays{saveenumi}
+%%%%%
+
 %%%%5 fontsize za bibliografiju
 \renewcommand*{\bibfont}{\scriptsize}
 %%%%%
@@ -336,7 +344,10 @@
 
     \begin{enumerate}
         \item QRP --- eng. \textit{questionable research practices}
-            \tinycitep{johnMeasuringPrevalenceQuestionable2012}
+            \bgroup
+            \scriptsize
+            \citep*{johnMeasuringPrevalenceQuestionable2012}
+            \egroup
 
         \pause
 
@@ -354,10 +365,50 @@
         \item mnogo različitih načina na koje se podaci \emph{mogu analizirati}
             \tinycitep{gelmanGardenForkingPaths2013}
 
-        \pause
+            \begin{itemize}
+                \item ,,[\ldots] researchers can perform a reasonable analysis
+                    given their assumptions and their data, but had the data
+                    turned out differently, they could have done other analyses
+                    that were just as reasonable in those circumstances`` (p. 1)
+
+                \pause
+
+                \item povezanost statističkih i znanstvenih hitpozea
+                    \bgroup
+                    \scriptsize
+                    \citep[također][]{yarkoniGeneralizabilityCrisis2019}
+                    \egroup
+            \end{itemize}
+
+        \seti
+
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}
+    \begin{enumerate}
+        \conti
 
         \item mnogo različitih načina na koje se podaci \emph{analiziraju}
             \tinycitep{silberzahnManyAnalystsOne2018}
+
+            \begin{itemize}
+                \item pitanje: jesu li nogometni suci skloniji crvene kartone
+                    davati crnim igračima?
+
+                \pause
+
+                \item 29 istraživačkih timova analiziralo je isti set
+                    podataka
+
+                \pause
+
+                \item 29 različitih načina na koje su podaci analizirani
+
+                \pause
+
+                \item ,,dva`` različita zaključka
+            \end{itemize}
 
     \end{enumerate}
 \end{frame}
@@ -366,6 +417,32 @@
 
 \begin{frame}
     \frametitle{IV) \textit{Multiverse} analize}
+
+    \begin{itemize}
+        \item ,,A multiverse analysis starts from the observation that data used
+            in an analysis are usually not just passively recorded in an
+            experiment or an observational study.  Rather, data are to a certain
+            extent actively constructed.``
+            \bgroup
+            \scriptsize
+            (\citealp*[p. 702]{steegenIncreasingTransparencyMultiverse2016};
+            \citealp*[za sličan pristup
+            vidi][]{simonsohnSpecificationCurveDescriptive2015})
+            \egroup
+
+        \pause
+
+        \item domisliti velik broj mogućih specifikacija problema
+
+        \item provesti analizu uz svaku moguću specifikaciju
+
+    \end{itemize}
+
+\end{frame}
+
+\begin{frame}
+    \centering
+    \includegraphics[scale=.27]{orben.png}
 \end{frame}
 
 \setbeamertemplate{headline}{}
