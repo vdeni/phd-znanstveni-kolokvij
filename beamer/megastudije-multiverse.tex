@@ -7,16 +7,17 @@
 \usepackage{microtype}
 \usepackage{csquotes}
 \usepackage[natbibapa]{apacite}
+\usepackage{url}
+\usepackage{fontawesome}
 
 %%%%% titlepage
 \title[]{\textit{Megastudy} paradigma i procesiranje jezika}
 \subtitle{\footnotesize Izlaganje za Znanstveni kolokvij}
-\author[]{Denis Vlašiček}
+\author[]{Denis Vlašiček \\[5em]
+    \scriptsize
+    \url{https://osf.io/zqa7y/}
+}
 \date[]{\footnotesize \today}
-%%%%%
-
-%%%%% serif font kao default
-\renewcommand{\familydefault}{\rmdefault}
 %%%%%
 
 %%%%% prilagodba referenci na hrvatski
@@ -50,6 +51,10 @@
         \insertsection\par
     \end{centering}
 }
+
+%%%%% serif font kao default
+\usefonttheme{serif}
+%%%%%
 
 \setbeamertemplate{navigation symbols}{}
 
@@ -191,7 +196,7 @@
 
             \pause
 
-            \item ,,prototipno`` testiranje hipoteza
+            \item ,,prototipno'' testiranje hipoteza
 
             \pause
 
@@ -208,13 +213,24 @@
     \frametitle{Što nam megastudije ne govore o jeziku?}
 
     \hspace*{\fill}
-    \begin{minipage}{25em}{
-        ,,In certain circles there is an almost religious faith that we can find
+    \raisebox{37.4pt}{
+        \begin{minipage}[t]{1em}
+            \fontsize{56}{66}\selectfont
+            \bfseries
+            ,,
+        \end{minipage}
+    }
+    \begin{minipage}{24em}
+        In certain circles there is an almost religious faith that we can find
         the answers to [causal] questions in the data itself, if only we are
         sufficiently clever at data mining. However, [\ldots] causal questions
-        can never be answered from data alone.`` \citet[str.
-        351]{pearlBookWhyNew2018}
-    } 
+        can never be answered from data alone.
+
+        \bigskip
+
+        \raggedleft
+        \scriptsize
+        \citet[str. 351]{pearlBookWhyNew2018}
     \end{minipage}
     \hspace*{\fill}
 
@@ -229,13 +245,16 @@
 
         \item standardni statistički modeli ne mogu zamijeniti znanstvenu
             ekspertizu
-            \tinycitep{mcelreathStatisticalRethinkingBayesian2020,
-            navarroIfMathematicalPsychology2020,navarroDevilDeepBlue2019}
+            \bgroup
+            \scriptsize
+            \citep[str. 526]{mcelreathStatisticalRethinkingBayesian2020}
+            \egroup
 
         \pause
 
         \item važnost razvoja formalnih teorija
-            \tinycitep{fiedlerToolsToysTruisms2004}
+            \tinycitep{fiedlerToolsToysTruisms2004,
+            navarroIfMathematicalPsychology2020,navarroDevilDeepBlue2019}
     \end{itemize}
 \end{frame}
 
@@ -369,7 +388,8 @@
                 \item ,,[\ldots] researchers can perform a reasonable analysis
                     given their assumptions and their data, but had the data
                     turned out differently, they could have done other analyses
-                    that were just as reasonable in those circumstances`` (p. 1)
+                    that were just as reasonable in those circumstances''
+                    (str. 1)
 
                 \pause
 
@@ -407,7 +427,7 @@
 
                 \pause
 
-                \item ,,dva`` različita zaključka
+                \item ,,dva'' različita zaključka
             \end{itemize}
 
     \end{enumerate}
@@ -422,10 +442,10 @@
         \item ,,A multiverse analysis starts from the observation that data used
             in an analysis are usually not just passively recorded in an
             experiment or an observational study.  Rather, data are to a certain
-            extent actively constructed.``
+            extent actively constructed.''
             \bgroup
             \scriptsize
-            (\citealp*[p. 702]{steegenIncreasingTransparencyMultiverse2016};
+            (\citealp*[str. 702]{steegenIncreasingTransparencyMultiverse2016};
             \citealp*[za sličan pristup
             vidi][]{simonsohnSpecificationCurveDescriptive2015})
             \egroup
@@ -442,7 +462,87 @@
 
 \begin{frame}
     \centering
-    \includegraphics[scale=.27]{orben.png}
+    \includegraphics[scale=.26]{orben.png}
+
+    \tinycitep{orbenAssociationAdolescentWellbeing2019}
+\end{frame}
+
+\subsection{\textit{Multiverse megastudy}}
+
+\begin{frame}
+    \frametitle{\textit{Multiverse} analiza i megastudije}
+
+    \begin{itemize}
+        \item predprocesiranje podataka
+            \begin{itemize}
+                \item odbaciti vremena reakcija van \(\pm 2 SD\)? \(3 SD\)?
+                \item koje sudionike zadržati na temelju točnosti odgovora?
+                    \(>80\%? >90\%\)?
+            \end{itemize}
+
+        \pause
+
+        \item kako modelirati vremena reakcija?
+            \begin{itemize}
+                \item različiti statistički modeli
+
+                \pause
+
+                \item koje mjere centralne tendencije koristiti?
+                    \tinycitep{rousseletReactionTimesOther2020}
+
+                \pause
+
+                \item kako i koju distribuciju modelirati?
+                    \tinycitep{balotaMovingMeanStudies2011}
+
+            \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\section{Rasprava}
+
+\begin{noheadline}
+
+\begin{frame}
+    \sectionpage
+\end{frame}
+
+\end{noheadline}
+
+\begin{frame}
+    \begin{center}
+        \begin{minipage}{25em}
+            O čemu pričamo kad pričamo o procesiranju jezika?
+            \citep{elliottWhatTestRetestReliability2020}
+        \end{minipage}
+    \end{center}
+\end{frame}
+
+\begin{frame}
+    \hspace*{\fill}
+    \raisebox{50.5pt}{
+        \begin{minipage}[t]{1em}
+            \fontsize{56}{66}\selectfont
+            \bfseries
+            ,,
+        \end{minipage}
+    }
+    \begin{minipage}{24em}
+        The empiricist period [\ldots] is characterized by a general
+        lack of interest in stringent theoretical and metatheoretical thinking.
+        [\ldots]  Industrious research appears to be mainly driven by available
+        research tools [\ldots], methods of analysis [\ldots], and the dynamics
+        of scientific subcommunities but is surprisingly, often detached from
+        clearly spelled-out theories.
+
+        \bigskip
+        \scriptsize
+        \raggedleft
+        \citep[str. 123]{fiedlerToolsToysTruisms2004}
+    \end{minipage}
+    \hspace*{\fill}
+
 \end{frame}
 
 \setbeamertemplate{headline}{}
